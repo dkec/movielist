@@ -1,0 +1,27 @@
+<div class="mt-5 row">
+  <div class="offset-lg-2 col-lg-8 offset-md-1 col-md-10 col-sm-12 col-12">
+    <app-movie-filter
+      (setFilterEvent)="filterMovies($event)"
+      [filterRange]="yearsForFilter">
+    </app-movie-filter>
+  </div>
+</div>
+
+<section *ngIf="movies.length">
+  <div *ngFor="let movie of filteredMovies" class="mt-3 row">
+    <div class="offset-lg-2 col-lg-8 offset-md-1 col-md-10 col-sm-12 col-12">
+      <app-movie [movie]="movie"></app-movie>
+    </div>
+  </div>
+</section>
+
+<div *ngIf="!movies.length" class="row">
+  <div class="offset-lg-2 col-lg-8 offset-md-1 col-md-10 col-sm-12 col-12">
+    <h3><i>No movies yet!...</i></h3>
+  </div>
+</div>
+<div *ngIf="!filteredMovies.length && movies.length" class="row">
+  <div class="offset-lg-2 col-lg-8 offset-md-1 col-md-10 col-sm-12 col-12">
+    <h3><i>No movies in the selected filter</i></h3>
+  </div>
+</div>

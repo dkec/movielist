@@ -1,0 +1,71 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "reset.scss";
+@import "bootstrap/bootstrap-grid.scss";
+
+.btn {
+  height: 40px;
+  border-radius: 4px;
+  padding: 0 2em 0 2em;
+  font-size: 16px;
+  font-family: 'Helvetica';
+  border: 1px solid transparent;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  cursor: pointer;
+  outline: 1px solid transparent;
+}
+
+.btn-yellow {
+  background-color: #F9B44A;
+  color: white;
+
+  &:hover {
+    background-color: #cc933d;
+  }
+}
+
+.btn-blue {
+  background-color: #1A72B0;
+  color: white;
+
+  &:hover {
+    background-color: #165a8b;
+  }
+}
+
+.btn-gray {
+  background-color: #F7F8F9;
+  color: #61696E;
+
+  &:hover {
+    background-color: #e2e4e5;
+  }
+}
+
+.btn-group {
+  display: inline-block;
+
+  .btn {
+    border: 1px solid #C2CAD0;
+    margin-right: -1px;
+    border-radius: 0;
+  }
+
+  .btn:first-of-type {
+    border-radius: 3px 0 0 3px;
+    margin-right: -1px;
+  }
+
+  .btn:last-of-type {
+    border-radius: 0 3px 3px 0;
+  }
+
+  .active {
+    background-color: #1A72B0;
+    color: white;
+  }
+
+  .active:hover {
+    background-color: #165a8b;
+  }
+}

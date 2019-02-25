@@ -1,0 +1,24 @@
+<div class="card">
+  <div class="card-img">
+    <img [src]="'assets/img/' + extractImageName(movie.Poster)" alt="">
+  </div>
+  <div class="card-body">
+    <div class="card-title">
+      <h3>{{movie.Title}}</h3>
+    </div>
+
+    <div class="card-content">
+      <div class="movie-info">
+        <span class="rating">{{movie.Rated}}</span>
+        <span class="time">{{movie.Runtime}}</span>
+        <span class="release-date">{{movie.Released}}</span>
+      </div>
+
+      <p class="description">{{movie.Plot}}</p>
+    </div>
+
+    <div class="card-footer">
+      <button class="btn btn-yellow">View on IMDB</button>
+    </div>
+  </div>
+</div>

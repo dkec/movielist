@@ -1,0 +1,12 @@
+<div class="movie-filter-container">
+  <div class="btn-group">
+    <button
+      *ngFor="let year of filterRange"
+      [ngClass]="{'active': currentFilter === year}"
+      (click)="setFilter(year)"
+      class="btn btn-gray"
+      type="button">
+      {{year}}'s
+    </button>
+  </div>
+</div>
